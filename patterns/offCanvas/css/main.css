@@ -1,0 +1,56 @@
+html, body, main {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+}
+
+.dark_blue {
+	color: #ffffff;
+	background-color: #000080;
+}
+
+.light_blue {
+	background-color: #1e90ff;
+}
+
+nav {
+	position: absolute;
+	width: 300px;
+	height: 100%;
+	-webkit-transform: translate(-300px, 0);
+	transform: translate(-300px, 0);
+	transition: transform 0.3s ease;
+}
+
+nav.open {
+	-webkit-transform: translate(0, 0);
+	transform: translate(0, 0);
+}
+
+svg {
+	width: 40px;
+}
+
+@media screen and (min-width: 600px) {
+	body {
+		-webkit-display: flex;
+		display: flex;
+	}
+	nav {
+		position: relative;
+		-webkit-transform: translate(0, 0);
+		transform: translate(0, 0);
+	}
+	p {
+		text-decoration: line-through;
+	}
+	main {
+		width: auto;
+		flex-grow: 1;
+	}
+}

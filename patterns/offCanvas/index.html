@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Off Canvas</title>
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+		<nav id="drawer" class="dark_blue">
+			<h1>Off Canvas</h1>
+			<p>Click outside the drawer to close</p>
+		</nav>
+		<main class="light_blue">
+			<a id="menu">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          				<path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"/>
+        			</svg>
+			</a>
+			<p>Click on the menu icon to open the drawer</p>
+		</main>
+		<script>
+			var drawer = document.querySelector("#drawer");
+			var main = document.querySelector("main");
+			var menu = document.querySelector("#menu");
+
+			menu.addEventListener("click", function(e) {
+				drawer.classList.toggle("open");
+				e.stopPropagation();
+			});
+			main.addEventListener("click", function() {
+				drawer.classList.remove("open");
+			});
+		</script>
+	</body>
+</html>
