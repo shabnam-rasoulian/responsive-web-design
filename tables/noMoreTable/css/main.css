@@ -1,0 +1,20 @@
+@media screen and (max-width: 500px) {
+	table, thead, tbody, th, tr, td {
+		display: block;	
+	}
+	thead th {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	td {
+		position: relative;
+		padding-left: 50%;
+	}	
+	td:before {
+		position: absolute;
+		left: 5px;
+		content: attr(data-th);
+		font-weight: bold;
+	}
+}

@@ -1,0 +1,17 @@
+body {
+	font-family: "Roboto", sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+@media screen and (max-width: 400px) {
+	.inning, .long_name {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 401px) {
+	.short_name {
+		display: none;
+	}
+}
